@@ -10,6 +10,7 @@ This project is a C++ implementation of a YOLOv10 inference engine using the ONN
 - **Simplicity:** Simplified codebase, focusing solely on object detection.
 - **Flexibility:** Easy to modify and extend to fit specific requirements.
 - **Greater Accuracy:** YoloV10 has greater accuracy at the same inferencing speed compared to YoloV8.
+- **Faster Inferencing:** In testing, YoloV10 runs 6% faster for the same size model.
 
 ## Prerequisites
 
@@ -24,7 +25,7 @@ This project is a C++ implementation of a YOLOv10 inference engine using the ONN
 
 ```sh
 git clone https://github.com/K4HVH/YOLOv10-ONNXRuntime-CPP
-cd yolov10-onnx-cpp
+cd YOLOv10-ONNXRuntime-CPP
 ```
 
 2. **Install dependencies:**
