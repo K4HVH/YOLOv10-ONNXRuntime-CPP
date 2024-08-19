@@ -15,7 +15,7 @@ This project is a C++ implementation of a YOLOv10 inference engine using the ONN
 
 - **ONNX Runtime:** Make sure to have ONNX Runtime installed.
 - **OpenCV:** Required for image processing and display.
-- **C++ Compiler:** Compatible with C++20.
+- **C++ Compiler:** Compatible with C++23.
 
 ## Getting Started
 
