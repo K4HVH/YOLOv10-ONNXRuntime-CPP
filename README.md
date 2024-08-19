@@ -1,20 +1,21 @@
-# YOLOv8 ONNXRuntime Engine in c++
+# YOLOv10 ONNXRuntime Engine in c++
 
 ## Overview
 
-This project is a C++ implementation of a YOLOv8 inference engine using the ONNX Runtime. It is heavily based on the project [yolov8-onnx-cpp by FourierMourier](https://github.com/FourierMourier/yolov8-onnx-cpp). The primary goal of this implementation is to provide a streamlined and efficient object detection pipeline that can be easily modified to suit various client needs.
+This project is a C++ implementation of a YOLOv10 inference engine using the ONNX Runtime. It is heavily based on the project [yolov8-onnx-cpp by FourierMourier](https://github.com/FourierMourier/yolov8-onnx-cpp) and is updated from my original project [YOLOv8-ONNXRuntime-CPP by K4HVH](https://github.com/K4HVH/YOLOv8-ONNXRuntime-CPP). The primary goal of this implementation is to provide a streamlined and efficient object detection pipeline that can be easily modified to suit various client needs.
 
 ## Features
 
 - **High Performance:** Optimized for speed to allow running inference in a loop at maximum speed.
 - **Simplicity:** Simplified codebase, focusing solely on object detection.
 - **Flexibility:** Easy to modify and extend to fit specific requirements.
+- **Greater Accuracy:** YoloV10 has greater accuracy at the same inferencing speed compared to YoloV8.
 
 ## Prerequisites
 
 - **ONNX Runtime:** Make sure to have ONNX Runtime installed.
 - **OpenCV:** Required for image processing and display.
-- **C++ Compiler:** Compatible with C++11 or higher.
+- **C++ Compiler:** Compatible with C++20.
 
 ## Getting Started
 
@@ -22,8 +23,8 @@ This project is a C++ implementation of a YOLOv8 inference engine using the ONNX
 1. **Clone the repository:**
 
 ```sh
-git clone https://github.com/your-repo/yolov8-onnx-cpp
-cd yolov8-onnx-cpp
+git clone https://github.com/K4HVH/YOLOv10-ONNXRuntime-CPP
+cd yolov10-onnx-cpp
 ```
 
 2. **Install dependencies:**
@@ -79,7 +80,7 @@ Here is a snippet from `main.cpp` demonstrating the usage:
 
 int main()
 {
-    std::wstring modelPath = L"best.onnx";
+    std::wstring modelPath = L"yolov10n.onnx";
     const char* logid = "yolo_inference";
     const char* provider = "CPU"; // or "CUDA"
 
@@ -93,7 +94,7 @@ int main()
         return -1;
     }
 
-    std::vector<Detection> detections = inferencer.infer(image, 0.1, 0.5);
+    std::vector<Detection> detections = inferencer.infer(image, 0.4, 0.5);
 
     for (const auto& detection : detections) {
         cv::rectangle(image, detection.box, cv::Scalar(0, 255, 0), 2);
@@ -117,3 +118,4 @@ This project is licensed under the GPL3.0 License.
 
 ## Acknowledgments
 This project borrows heavily from the original [yolov8-onnx-cpp repository](https://github.com/FourierMourier/yolov8-onnx-cpp).
+This project is an update from my original project [YOLOv8-ONNXRuntime-CPP](https://github.com/K4HVH/YOLOv8-ONNXRuntime-CPP) to support YoloV10.
