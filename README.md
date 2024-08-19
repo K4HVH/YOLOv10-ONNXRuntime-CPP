@@ -9,8 +9,8 @@ This project is a C++ implementation of a YOLOv10 inference engine using the ONN
 - **High Performance:** Optimized for speed to allow running inference in a loop at maximum speed.
 - **Simplicity:** Simplified codebase, focusing solely on object detection.
 - **Flexibility:** Easy to modify and extend to fit specific requirements.
-- **Greater Accuracy:** YoloV10 has greater accuracy at the same inferencing speed compared to YoloV8.
-- **Faster Inferencing:** In testing, YoloV10 runs 6% faster for the same size model.
+- **Greater Accuracy:** YOLOv10 has greater accuracy at the same inferencing speed compared to YoloV8.
+- **Faster Inferencing:** In testing, YOLOv10 runs 6% faster for the same size model.
 
 ## Prerequisites
 
