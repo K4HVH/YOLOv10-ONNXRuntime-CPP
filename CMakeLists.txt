@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Path to ONNX Runtime
-set(ONNXRUNTIME_DIR "D:/Programs/onnxruntime-win-x64-gpu-1.18.0")
+set(ONNXRUNTIME_DIR "path/to/onnxruntime")
 
 # Path to OpenCV
 find_package(OpenCV CONFIG REQUIRED)
